@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
+import BarChart from "../components/chart/BarChart";
+import { UserData } from "../components/chart/Data";
 import NavBar from "../components/Navbar";
+import { useState } from "react";
 
 const Project = () => {
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.year),
+    datasets: [
+      {
+        label: "Users Gained",
+        data: UserData.map((data) => data.userGain),
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#ecf0f1",
+          "#50AF95",
+          "#f3ba2f",
+          "#2a71d0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  });
   return (
     <div>
       <NavBar />
@@ -64,7 +85,13 @@ const Project = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-8"> Chart</div>
+          <div className="col-md-8">
+            {" "}
+            Chart{" "}
+            <div style={{ "width":"500" }}>
+              <BarChart chartData={userData} />
+            </div>
+          </div>
         </div>
         <div className="row mt-5">
           <div className="col-md-12">
