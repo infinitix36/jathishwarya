@@ -5,6 +5,7 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route exact path="/" element={<Project></Project>} />
         <Route exact path="/project" element={<Project></Project>} />
       </Routes>
     </BrowserRouter>
