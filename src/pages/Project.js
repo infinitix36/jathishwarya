@@ -3,6 +3,7 @@ import BarChart from "../components/chart/BarChart";
 import { UserData } from "../components/chart/Data";
 import NavBar from "../components/Navbar";
 import { useState } from "react";
+import "../css/Project.css"
 
 const Project = () => {
   const [userData, setUserData] = useState({
@@ -75,20 +76,23 @@ const Project = () => {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-md-4">
-            <div class="card" style={{ width: "18rem" }}>
+          <div className="col-md-6">
+            <div class="card">
               <div class="card-header">Featured</div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Cras justo odio</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Vestibulum at eros</li>
               </ul>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-6">
             {" "}
             Chart{" "}
-            <div style={{ "width":"500" }}>
+            <div>
               <BarChart chartData={userData} />
             </div>
           </div>
