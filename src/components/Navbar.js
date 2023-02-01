@@ -24,7 +24,7 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-md-auto gap-2">
               <li className="nav-item rounded">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/dashboard">
                   <i className="bi bi-house-fill me-2"></i>Dashboard
                 </Link>
               </li>
