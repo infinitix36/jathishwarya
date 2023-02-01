@@ -4,10 +4,14 @@ import { UserData } from "../components/chart/Data";
 import NavBar from "../components/Navbar";
 import { useState } from "react";
 import "../css/Project.css"
+import Dough from "../components/chart/Dough";
+import {BsFillPlusCircleFill} from "react-icons/bs"; 
+import Table from "./Table";
+
 
 const Project = () => {
   const [userData, setUserData] = useState({
-    labels: UserData.map((data) => data.year),
+    labels: UserData.map((data) => data.month),
     datasets: [
       {
         label: "Users Gained",
@@ -29,94 +33,57 @@ const Project = () => {
       <NavBar />
       <div className="container">
         <div className="row mt-5">
-          <div className="col-md-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
-            euismod justo. Aliquam a lorem vel libero venenatis cursus. Donec in
-            bibendum justo, eget tristique erat. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Maecenas in elit mi. Praesent viverra nisi eu
-            turpis porta, ut iaculis mauris ultricies. Phasellus vestibulum
-            augue in tincidunt pretium. Integer ipsum risus, pretium et ante et,
-            mollis tempor lectus. Ut faucibus malesuada mi, vitae mollis ligula.
-            Suspendisse maximus pellentesque vestibulum. Mauris{" "}
-          </div>
-          <div className="col-md-6">
-            <h3>contributors</h3>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-6">
-            <div class="card">
-              <div class="card-header">Featured</div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md-6">
+          <div className="col-md-3">
+            Add Projects<br/><br/>
+            <div><BsFillPlusCircleFill/> Create New Project </div>
             {" "}
-            Chart{" "}
-            <div>
-              <BarChart chartData={userData} />
-            </div>
           </div>
+          <div className="col-md-3">
+          <div class="card text-bg-info mb-3" style={{ maxWidth: "18rem" }}>
+      <div class="card-header"><img src="https://marketplacecontent.zoom.us/%2FnptAB68BTdO6Jrc_A6ROUA%2FDdIgA0x-QJKBkUaxQR_Q5A%2Fapp%2FtKVbP0NiSve_Mul31LfEEw%2FpHAZ_eIvRJi7OmEEMDq6QA.png" style={{width: "2rem" }, {height: "2rem"}} class="card-title"></img></div>
+      <div class="card-body">
+        <h5 class="card-title">Info card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+            </div>
+            <div className="col-md-3">
+                    <div class="card text-bg-warning mb-3" style={{ maxWidth: "18rem" }}>
+      <div class="card-header"><img src="https://imageio.forbes.com/specials-images/imageserve/5cd9d263169cc600095f2398/0x0.jpg?format=jpg&crop=1200,1200,x0,y0,safe&height=87&width=87" style={{width: "2rem" }, {height: "2rem"}} class="card-title"></img></div>
+      <div class="card-body">
+        <h5 class="card-title">Warning card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+            </div>
+            <div className="col-md-3">
+            <div class="card text-bg-success mb-3" style={{ maxWidth: "18rem" }}>
+      <div class="card-header"><img src="https://i.pinimg.com/originals/2c/b1/a5/2cb1a59484ed73766fd11474667ace8a.jpg" style={{width: "2rem" }, {height: "2rem"}} class="card-title"></img></div>
+      <div class="card-body">
+        <h5 class="card-title">Success card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+            </div>
         </div>
         <div className="row mt-5">
-          <div className="col-md-12">
-            <div class="card text-left">
-              <div class="card-header">Featured</div>
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <Link to="#" class="btn btn-primary">
-                  Go somewhere
-                </Link>
-              </div>
-              <div class="card-footer text-muted">2 days ago</div>
-            </div>
-          </div>
+          <Table/>
         </div>
         <br></br>
         <br></br>
+
+        <div className="row mt-5">
+          <div className="col-md-6">
+              {" "}
+              Chart{" "}
+              <div>
+                <BarChart chartData={userData} />
+              </div>
+          </div>
+          <div className="col-md-6">
+            <Dough/>
+          </div>
+        </div>
       </div>
     </div>
   );
