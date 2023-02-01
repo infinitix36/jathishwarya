@@ -1,5 +1,27 @@
 import NavBar from "../components/Navbar";
+import { useState } from "react";
+import { UserData } from "../components/chart/Data";
+import BarChart from "../components/chart/BarChart";
+
 const Dashboard = () => {
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.year),
+    datasets: [
+      {
+        label: "Users Gained",
+        data: UserData.map((data) => data.userGain),
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#ecf0f1",
+          "#50AF95",
+          "#f3ba2f",
+          "#2a71d0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  });
   return (
     <div>
       <NavBar />
@@ -83,7 +105,7 @@ const Dashboard = () => {
                       <img
                         src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                         alt=""
-                        style={{"width": "45px", "height": "45px"}}
+                        style={{ width: "45px", height: "45px" }}
                         class="rounded-circle"
                       />
                       <div class="ms-3">
@@ -118,7 +140,7 @@ const Dashboard = () => {
                         src="https://mdbootstrap.com/img/new/avatars/6.jpg"
                         class="rounded-circle"
                         alt=""
-                        style={{"width": "45px", "height": "45px"}}
+                        style={{ width: "45px", height: "45px" }}
                       />
                       <div class="ms-3">
                         <p class="fw-bold mb-1">Alex Ray</p>
@@ -153,7 +175,7 @@ const Dashboard = () => {
                         src="https://mdbootstrap.com/img/new/avatars/7.jpg"
                         class="rounded-circle"
                         alt=""
-                        style={{"width": "45px", "height": "45px"}}
+                        style={{ width: "45px", height: "45px" }}
                       />
                       <div class="ms-3">
                         <p class="fw-bold mb-1">Kate Hunington</p>
@@ -183,6 +205,16 @@ const Dashboard = () => {
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class=" col-md-2"></div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-10">
+            {" "}
+            Chart{" "}
+            <div>
+              <BarChart chartData={userData}/>
+            </div>
           </div>
         </div>
       </div>
