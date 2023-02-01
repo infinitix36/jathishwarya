@@ -84,6 +84,8 @@ const Project = () => {
             </div>
           </div>
         </div>
+        <br></br>
+        <br></br>
       </div>
     </div>
   );
