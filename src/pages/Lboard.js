@@ -1,8 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../components/Navbar';
-
-
+import {Link} from 'react-router-dom';
 
 
 function Lboard() {
@@ -59,24 +58,23 @@ function Lboard() {
 
 const renderdata = (data, index) => {
   return(
-    <tr key={index} class="col-md-4">
-      <td><span class="m-5 p-5"><img class="rounded-circle" width={75}
-        height={75} src={data.img} /></span></td>
-      <td><span class="m-5 p-5">{data.Name}</span></td>
-      <td><span class="m-5 p-5">{data.Score}</span></td>
-      <td><span class="m-5 p-5">{data.Rank}</span></td>
-    </tr>
+    <div className="container">
+        <div className="row mt-4" key={index}>
+          <div className="col-md-2"><img class="rounded-circle" width={50}
+        height={50} src={data.img} /></div>
+          <div className="col-md-5">{data.Name}</div>
+          <div className="col-md-3">{data.Score}</div>
+          <div className="col-md-2">{data.Rank}</div>
+        </div>
+    </div>
   )
 }
   return (
     <div>
     <Navbar/>
+    <Link to='/list'><i class="bi bi-caret-left-fill"></i></Link>
     <h1 class="position-absolute top-16 start-50 translate-middle-x">Ranking</h1><br/><br/>
-      <table>
-        <tbody className='tablecontent'>
-          {data.map(renderdata)}
-        </tbody>
-      </table>
+        {data.map(renderdata)}
     </div>
   );
 }

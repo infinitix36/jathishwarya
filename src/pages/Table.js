@@ -30,22 +30,15 @@ const Table = () => {
                     </div>
                   </td>
                   <td>
-                    <p class="fw-normal mb-0">Software engineer</p>
+                    <p class="fw-normal mb-0">Thu, 26 Oct</p>
                     
                   </td>
                   <td>
-                    <span class="badge badge-success rounded-pill d-inline">
-                      Active
-                    </span>
+                    Christian Matthews
                   </td>
-                  <td>Senior</td>
+                  <td>Sat, 28 Oct</td>
                   <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-sm btn-rounded"
-                    >
-                      Edit
-                    </button>
+                  <button type="button" class="btn btn-primary">IN PROGRESS</button>
                   </td>
                 </tr>
                 <tr>
@@ -63,23 +56,14 @@ const Table = () => {
                     </div>
                   </td>
                   <td>
-                    <p class="fw-normal mb-1">Consultant</p>
-                    <p class="text-muted mb-0">Finance</p>
+                    <p class="fw-normal mb-0">Wed, 25 Oct</p>
                   </td>
                   <td>
-                    <span class="badge badge-primary rounded-pill d-inline">
-                      Onboarding
-                    </span>
+                   Arthur Cook
                   </td>
-                  <td>Junior</td>
+                  <td>Fri, 27 Oct</td>
                   <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-rounded btn-sm fw-bold"
-                      data-mdb-ripple-color="dark"
-                    >
-                      Edit
-                    </button>
+                  <button type="button" class="btn btn-danger">FINISHED</button>
                   </td>
                 </tr>
                 <tr>
@@ -97,23 +81,14 @@ const Table = () => {
                     </div>
                   </td>
                   <td>
-                    <p class="fw-normal mb-1">Designer</p>
-                    <p class="text-muted mb-0">UI/UX</p>
+                    <p class="fw-normal mb-0">Tue, 24 Oct</p>
                   </td>
                   <td>
-                    <span class="badge badge-warning rounded-pill d-inline">
-                      Awaiting
-                    </span>
+                    Evelyn Tucker
                   </td>
-                  <td>Senior</td>
+                  <td>Thu, 26 Oct</td>
                   <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-rounded btn-sm fw-bold"
-                      data-mdb-ripple-color="dark"
-                    >
-                      Edit
-                    </button>
+                  <button type="button" class="btn btn-primary">IN PROGRESS</button>
                   </td>
                 </tr>
                 <tr>
@@ -131,23 +106,14 @@ const Table = () => {
                     </div>
                   </td>
                   <td>
-                    <p class="fw-normal mb-1">Designer</p>
-                    <p class="text-muted mb-0">UI/UX</p>
+                    <p class="fw-normal mb-0">Mon, 23 Oct</p>
                   </td>
                   <td>
-                    <span class="badge badge-warning rounded-pill d-inline">
-                      Awaiting
-                    </span>
+                    Donald Curtis
                   </td>
-                  <td>Senior</td>
+                  <td>Wed, 25 Oct</td>
                   <td>
-                    <button
-                      type="button"
-                      class="btn btn-link btn-rounded btn-sm fw-bold"
-                      data-mdb-ripple-color="dark"
-                    >
-                      Edit
-                    </button>
+                  <button type="button" class="btn btn-danger">FINISHED</button>
                   </td>
                 </tr>
               </tbody>
